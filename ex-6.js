@@ -86,3 +86,10 @@ let orders = [
 let birdiePurchasedAmount;
 
 // Start coding here
+for (let id in orders) {
+  if(orders[id].customerName==="Birdie Shepland"){
+    birdiePurchasedAmount = orders[id].productPrice*orders[id].productQuantity
+    console.log(orders[id].customerName)
+  }
+}
+console.log("Total price is "+ birdiePurchasedAmount)
