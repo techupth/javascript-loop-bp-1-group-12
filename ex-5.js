@@ -89,3 +89,15 @@ let maxPurchasedAmount;
 let maxPurchasedId;
 
 // Start coding here
+function findMaxTotalPriceAmount(){
+  let id
+  let currentValue = 0
+  for(let i in orders){
+    
+    if(orders[i].productPrice * orders[i].productQuantity > currentValue){
+      currentValue = orders[i].productPrice * orders[i].productQuantity
+      id = orders[i].id
+    }
+  }console.log(`Order id: ${id}, Total price: ${currentValue}`)
+}
+findMaxTotalPriceAmount()

@@ -10,3 +10,31 @@ let studentsScore = {
 };
 
 // Start coding here
+let total = 0
+for(let i in studentsScore){
+  total += studentsScore[i]
+}
+console.log(`Average score is ${total}`)
+
+let maxScore = 0
+let maxScoreName = ""
+for(let i in studentsScore){
+  if(studentsScore[i]> maxScore){
+    maxScoreName = i
+    maxScore = studentsScore[i]
+  }
+}
+console.log(`${maxScoreName} has the highest score, which is ${maxScore} points.`)
+
+let minScore
+let minScoreName = ""
+for(let i in studentsScore){
+  if(minScore == undefined){
+    minScore = studentsScore[i]
+  }
+  if(studentsScore[i]<minScore){
+    minScoreName = i
+    minScore = studentsScore[i]
+  }
+}
+console.log(`${minScoreName} has the highest score, which is ${minScore} points.`)
